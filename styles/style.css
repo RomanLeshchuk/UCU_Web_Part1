@@ -180,7 +180,7 @@ section {
 .header {
     width: 100%;
     position: relative;
-    z-index: 10;
+    z-index: 9999;
 }
 
 .header-inner {
@@ -436,7 +436,6 @@ section {
     font-size: 32px;
     color: var(--c-mid-green);
     font-weight: 600;
-    line-height: 39px;
 }
 
 .steps-list {
@@ -472,8 +471,8 @@ section {
     justify-content: center;
     font-weight: 600;
     font-size: 32px;
-    line-height: 39px;
     flex-shrink: 0;
+    padding-top: 3px;
 }
 
 .how-it-works-image {
@@ -574,9 +573,8 @@ section {
     justify-content: center;
     font-weight: 600;
     font-size: 32px;
-    line-height: 39px;
     flex-shrink: 0;
-    margin-top: -4px; 
+    padding-top: 3px;
 }
 
 .app-feature-text-wrapper {
@@ -694,8 +692,8 @@ section {
 }
 
 .reviews {
-    background-color: var(--bg-cream); 
-    padding-top: 20px; 
+    background-color: var(--bg-cream);
+    padding-top: 60px;
 }
 
 .reviews .section-title {
@@ -746,12 +744,11 @@ section {
 .footer {
     width: 100%;
     background-color: var(--bg-flesh);
-    border-radius: 20px 20px 0 0; 
-    padding-top: 60px;
-    padding-bottom: 60px; 
+    border-radius: 20px 20px 0 0;
+    padding: 60px 0;
     margin-bottom: 0;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .footer-main {
@@ -879,11 +876,7 @@ section {
     }
 
     section {
-        padding: 60px 0; 
-    }
-
-    .features, .kit-section {
-        padding-top: 40px; 
+        padding: 40px 0; 
     }
 
     .app-section {
@@ -1057,6 +1050,10 @@ section {
         width: 100%;
     }
 
+    .how-it-works-content {
+        padding-top: 10px;
+    }
+
     .how-it-works-image,
     .app-image {
         flex: none;
@@ -1075,7 +1072,6 @@ section {
 
     .section-subtitle {
         font-size: 24px;
-        margin-bottom: 16px;
     }
 
     .step-item {
@@ -1184,6 +1180,10 @@ section {
         margin-top: 0;
     }
 
+    .reviews {
+        padding-top: 40px;
+    }
+
     .reviews-grid {
         grid-template-columns: 1fr; 
         gap: 16px;
@@ -1199,6 +1199,10 @@ section {
 
     .review-text {
         font-size: 14px;
+    }
+
+    .footer {
+        padding: 40px 0;
     }
 
     .footer-main {
