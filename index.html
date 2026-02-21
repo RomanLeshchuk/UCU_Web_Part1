@@ -3,313 +3,401 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            LeafyPod
-        </title>
+        <title>LeafyPod</title>
+        <link rel="stylesheet" href="styles/style.css" />
     </head>
     <body>
-        <header class="header">
-            <a href="#" class="logo-link">
-                <img class="logo-img" src="./icons/LeafyPodLogo.svg" alt="Логотип LeafyPod" />
-                <span class="logo-text">LeafyPod</span>
-            </a>
-            <nav class="header-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Про товар</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Додаток</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Відгуки</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Зв'язатися</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main class="main">
+        <div class="top-wrapper">
+            <div class="hero-image-container">
+                <img class="hero-img" src="./media/img/flowerpot.png" alt="Вазон LeafyPod з рослиною" />
+            </div>
+
+            <header class="header">
+                <div class="container header-inner">
+                    <a href="#" class="logo-link">
+                        <img class="logo-img" src="./media/img/logo.svg" alt="Логотип LeafyPod" />
+                        <span class="logo-text">LeafyPod</span>
+                    </a>
+                    
+                    <nav class="header-nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a class="nav-link" href="#">Про товар</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Додаток</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Відгуки</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Зв'язатися</a></li>
+                        </ul>
+                    </nav>
+
+                    <input type="checkbox" id="mobile-menu-toggle" hidden />
+                    
+                    <label for="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Відкрити меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+
+                    <div class="mobile-menu-popup">
+                        <label for="mobile-menu-toggle" class="mobile-menu-close" aria-label="Закрити меню">&times;</label>
+                        <nav class="mobile-menu-nav">
+                            <a href="#">Про товар</a>
+                            <a href="#">Додаток</a>
+                            <a href="#">Відгуки</a>
+                            <a href="#">Зв'язатися</a>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
             <section class="hero">
-                <div class="hero-content">
-                    <h1 class="hero-title">Інтелектуальний вазон з автополивом</h1>
-                    <p class="hero-description">
-                        LeafyPod — це інтелектуальний вазон, який автоматизує догляд за
-                        рослинами, створюючи ідеальні умови завдяки системі автополиву та
-                        датчикам.
-                    </p>
-                    <a href="#" class="btn btn-primary">Найкраща пропозиція на Kickstarter</a>
-                </div>
-                <div class="hero-image-container">
-                    <img class="hero-img" src="./images/HeroPlant.png" alt="Вазон LeafyPod з рослиною" />
+                <div class="container hero-inner">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Інтелектуальний вазон з автополивом</h1>
+                        <p class="hero-description">
+                            LeafyPod — це інтелектуальний вазон, який автоматизує догляд за
+                            рослинами, створюючи ідеальні умови завдяки системі автополиву та
+                            датчикам.
+                        </p>
+                        <a href="#" class="btn btn-primary">Найкраща пропозиція <br /> на Kickstarter</a>
+                    </div>
                 </div>
             </section>
+        </div>
+
+        <main class="main">
             <section class="solutions">
-                <h2 class="section-title">Вирішує 4 головні причини загибелі рослин</h2>
-                <div class="solutions-grid">
-                    <article class="solution-card">
-                        <img class="solution-icon" src="./icons/Moisture.svg" alt="Іконка зволоження" />
-                        <h3 class="solution-title">Зволоження ґрунту</h3>
-                        <p class="solution-text">
-                            Полив динамічно регулюється, щоб ваші рослини залишалися настільки
-                            вологими або сухими, наскільки вони повинні бути
-                        </p>
-                    </article>
-                    <article class="solution-card">
-                        <img class="solution-icon" src="./icons/Light.svg" alt="Іконка світла" />
-                        <h3 class="solution-title">Світло</h3>
-                        <p class="solution-text">
-                            Отримуйте індивідуальні рекомендації щодо освітлення, навіть якщо
-                            ви не спостерігаєте за своєю рослиною так уважно, як ми
-                        </p>
-                    </article>
-                    <article class="solution-card">
-                        <img class="solution-icon" src="./icons/Temperature.svg" alt="Іконка температури" />
-                        <h3 class="solution-title">Температура</h3>
-                        <p class="solution-text">
-                            Вбудовані датчики відстежують температуру 24/7, тож ви будете
-                            попереджені про перші зимові нічні протяги, щоб перенести вашу
-                            улюблену рослину в тепліше місце!
-                        </p>
-                    </article>
-                    <article class="solution-card">
-                        <img class="solution-icon" src="./icons/Humidity.svg" alt="Іконка вологості" />
-                        <h3 class="solution-title">Вологість повітря</h3>
-                        <p class="solution-text">
-                            Чи знаєте ви, що 20% різниця вологості між вашою спальнею та
-                            ванною може суттєво вплинути на процвітання вашого потосу?
-                            Отримуйте сповіщення в додатку!
-                        </p>
-                    </article>
+                <div class="container">
+                    <img class="decoration-1" src="./media/img/decoration-1.png" alt="" aria-hidden="true" />
+                    
+                    <h2 class="section-title">Вирішує 4 головні причини загибелі рослин</h2>
+                    <div class="solutions-grid">
+                        <article class="solution-card">
+                            <div class="solution-card-header">
+                                <div class="solution-icon-wrapper">
+                                    <img class="solution-icon" src="./media/img/hydration-icon.svg" alt="Іконка зволоження" />
+                                </div>
+                                <h3 class="solution-title">Зволоження ґрунту</h3>
+                            </div>
+                            <p class="solution-text">
+                                Полив динамічно регулюється, щоб ваші рослини залишалися настільки
+                                вологими або сухими, наскільки вони повинні бути
+                            </p>
+                        </article>
+                        <article class="solution-card">
+                            <div class="solution-card-header">
+                                <div class="solution-icon-wrapper">
+                                    <img class="solution-icon" src="./media/img/sun-icon.svg" alt="Іконка світла" />
+                                </div>
+                                <h3 class="solution-title">Світло</h3>
+                            </div>
+                            <p class="solution-text">
+                                Отримуйте індивідуальні рекомендації щодо освітлення, навіть якщо
+                                ви не спостерігаєте за своєю рослиною так уважно, як ми
+                            </p>
+                        </article>
+                        <article class="solution-card">
+                            <div class="solution-card-header">
+                                <div class="solution-icon-wrapper">
+                                    <img class="solution-icon" src="./media/img/temp-icon.svg" alt="Іконка температури" />
+                                </div>
+                                <h3 class="solution-title">Температура</h3>
+                            </div>
+                            <p class="solution-text">
+                                Вбудовані датчики відстежують температуру 24/7, тож ви будете
+                                попереджені про перші зимові нічні протяги, щоб перенести вашу
+                                улюблену рослину в тепліше місце!
+                            </p>
+                        </article>
+                        <article class="solution-card">
+                            <div class="solution-card-header">
+                                <div class="solution-icon-wrapper">
+                                    <img class="solution-icon" src="./media/img/humidity-icon.svg" alt="Іконка вологості" />
+                                </div>
+                                <h3 class="solution-title">Вологість повітря</h3>
+                            </div>
+                            <p class="solution-text">
+                                Чи знаєте ви, що 20% різниця вологості між вашою спальнею та
+                                ванною може суттєво вплинути на процвітання вашого потосу?
+                                Отримуйте сповіщення в додатку!
+                            </p>
+                        </article>
+                    </div>
                 </div>
             </section>
+
             <section class="how-it-works">
-                <div class="how-it-works-content">
+                <div class="container">
                     <h2 class="section-title">
                         Рослини в'януть? Немає часу на догляд? <br />
                         Ми вирішимо це!
                     </h2>
-                    <h3 class="section-subtitle">Як це працює</h3>
-                    <ol class="steps-list">
-                        <li class="step-item">Заповніть резервуар водою</li>
-                        <li class="step-item">Виберіть режим автополиву</li>
-                        <li class="step-item">Насолоджуйтесь здоровими рослинами!</li>
-                    </ol>
-                </div>
-                <div class="how-it-works-image">
-                    <img src="./images/WomanWithPlant.jpg" alt="Жінка доглядає за рослиною у вазоні LeafyPod" />
-                </div>
-            </section>
-            <section class="features">
-                <h2 class="section-title">Особливості продукту</h2>
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <div class="feature-header">
-                            <h3 class="feature-title">Тривале використання</h3>
-                            <img class="feature-icon" src="./icons/Pump.svg" alt="Іконка насоса" />
+                    <div class="how-it-works-inner">
+                        <div class="how-it-works-content">
+                            <h3 class="section-subtitle">Як це працює</h3>
+                            <ol class="steps-list">
+                                <li class="step-item">Заповніть резервуар водою</li>
+                                <li class="step-item">Виберіть режим автополиву</li>
+                                <li class="step-item">Насолоджуйтесь здоровими рослинами!</li>
+                            </ol>
                         </div>
-                        <p class="feature-text">
-                            Фільтри гарантують тривалу роботу насоса. Захищений від
-                            пошкодження водою
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-header">
-                            <h3 class="feature-title">Лаконічний дизайн</h3>
-                            <img class="feature-icon" src="./icons/Design.svg" alt="Іконка дизайну" />
+                        <div class="how-it-works-image">
+                            <video 
+                                class="how-it-works-video" 
+                                src="./media/video/girl-flower.mp4" 
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline>
+                            </video>
                         </div>
-                        <p class="feature-text">
-                            Стильний та інноваційний аксесуар гармоній впишеться до будь-якої
-                            оселі
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-header">
-                            <h3 class="feature-title">Регулярні оновлення</h3>
-                            <img class="feature-icon" src="./icons/Cloud.svg" alt="Іконка хмари" />
-                        </div>
-                        <p class="feature-text">
-                            LeafyPod продовжує працювати завдяки оновленню програм
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-header">
-                            <h3 class="feature-title">Бездротова конструкція</h3>
-                            <img class="feature-icon" src="./icons/Lightning.svg" alt="Іконка блискавки" />
-                        </div>
-                        <p class="feature-text">
-                            Більше 3 місяців на одному заряді навіть при регулярному
-                            використанні
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-header">
-                            <h3 class="feature-title">Резервуар для води</h3>
-                            <img class="feature-icon" src="./icons/WaterDrop.svg" alt="Іконка краплі" />
-                        </div>
-                        <p class="feature-text">
-                            Води в резервуарі достатньо приблизно на 4 тижні
-                        </p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-header">
-                            <h3 class="feature-title">Екологічна упаковка</h3>
-                            <img class="feature-icon" src="./icons/Leaf.svg" alt="Іконка листка" />
-                        </div>
-                        <p class="feature-text">
-                            Упаковка виготовлена з матеріалів, які на 90+% підлягають
-                            переробці
-                        </p>
-                    </article>
-                </div>
-            </section>
-            <section class="app-section">
-                <div class="app-content">
-                    <h2 class="section-title">Функції мобільного додатку</h2>
-                    <ol class="app-features-list">
-                        <li class="app-feature-item">
-                            <h3 class="app-feature-title">Управління через смартфон</h3>
-                            <p class="app-feature-text">
-                                Додаток дозволяє легко контролювати стан рослин і процес поливу
-                                прямо з вашого телефону.
-                            </p>
-                        </li>
-                        <li class="app-feature-item">
-                            <h3 class="app-feature-title">Розумні сповіщення</h3>
-                            <p class="app-feature-text">
-                                Нагадування, коли рослині треба догляд.
-                            </p>
-                        </li>
-                        <li class="app-feature-item">
-                            <h3 class="app-feature-title">Щотижнева статистика</h3>
-                            <p class="app-feature-text">
-                                Прості й зрозумілі звіти про стан рослин для покращення вашого
-                                догляду.
-                            </p>
-                        </li>
-                        <li class="app-feature-item">
-                            <h3 class="app-feature-title">Режими поливу</h3>
-                            <p class="app-feature-text">
-                                Режими поливу графік графіка на основі потреб рослини: полив
-                                створюється за низької вологості обґрунтовано, а AI оптимізує
-                                процес.
-                            </p>
-                        </li>
-                    </ol>
-                </div>
-                <div class="app-image">
-                    <img src="./images/AppPhone.png" alt="Додаток LeafyPod" />
-                </div>
-            </section>
-            <section class="kit-section">
-                <h2 class="section-title">Що у комплекті</h2>
-                <div class="kit-container">
-                    <figure class="kit-main-item">
-                        <img src="./images/LeafyPodDevice.png" alt="LeafyPod пристрій" />
-                        <figcaption>LeafyPod</figcaption>
-                    </figure>
-                    <div class="kit-accessories">
-                        <figure class="kit-item">
-                            <img src="./images/Adapter.png" alt="Адаптер живлення" />
-                            <figcaption>Адаптер<br />живлення</figcaption>
-                        </figure>
-                        <figure class="kit-item">
-                            <img src="./images/Cable.png" alt="Зарядний кабель" />
-                            <figcaption>Зарядний<br />кабель</figcaption>
-                        </figure>
-                        <figure class="kit-item">
-                            <img src="./images/Filter.png" alt="Фільтр" />
-                            <figcaption>LeafyPod<br />фільтр</figcaption>
-                        </figure>
-                        <figure class="kit-item">
-                            <img src="./images/Manual.png" alt="Інструкція" />
-                            <figcaption>Інструкція</figcaption>
-                        </figure>
                     </div>
                 </div>
             </section>
+
+            <section class="features">
+                <div class="container">
+                    <img class="decoration-2 decoration-2-mobile" src="./media/img/decoration-2.png" alt="" aria-hidden="true" />
+
+                    <h2 class="section-title">Особливості продукту</h2>
+                    <div class="features-grid">
+                        <article class="feature-card">
+                            <div class="feature-header">
+                                <h3 class="feature-title">Тривале використання</h3>
+                                <img class="feature-icon" src="./media/img/hand-icon.svg" alt="Іконка тривалого використання" />
+                            </div>
+                            <p class="feature-text">
+                                Фільтри гарантують тривалу роботу насоса. Захищений від
+                                пошкодження водою
+                            </p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-header">
+                                <h3 class="feature-title">Лаконічний дизайн</h3>
+                                <img class="feature-icon" src="./media/img/plant-icon.svg" alt="Іконка лаконічного дизайну" />
+                            </div>
+                            <p class="feature-text">
+                                Стильний та інноваційний аксесуар гармоній впишеться до будь-якої
+                                оселі
+                            </p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-header">
+                                <h3 class="feature-title">Регулярні оновлення</h3>
+                                <img class="feature-icon" src="./media/img/update-icon.svg" alt="Іконка регулярних оновлень" />
+                            </div>
+                            <p class="feature-text">
+                                LeafyPod продовжує працювати завдяки оновленню програм
+                            </p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-header">
+                                <h3 class="feature-title">Бездротова конструкція</h3>
+                                <img class="feature-icon" src="./media/img/electricity-icon.svg" alt="Іконка бездротової конструкції" />
+                            </div>
+                            <p class="feature-text">
+                                Більше 3 місяців на одному заряді навіть при регулярному
+                                використанні
+                            </p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-header">
+                                <h3 class="feature-title">Резервуар для води</h3>
+                                <img class="feature-icon" src="./media/img/water-drop-icon.svg" alt="Іконка резервуара для води" />
+                            </div>
+                            <p class="feature-text">
+                                Води в резервуарі достатньо приблизно на 4 тижні
+                            </p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-header">
+                                <h3 class="feature-title">Екологічна упаковка</h3>
+                                <img class="feature-icon" src="./media/img/leaf-icon.svg" alt="Іконка екологічної упаковки" />
+                            </div>
+                            <p class="feature-text">
+                                Упаковка виготовлена з матеріалів, які на 90+% підлягають
+                                переробці
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <div class="container">
+                    <h2 class="section-title">Функції мобільного додатку</h2>
+                    <div class="app-inner">
+                        <div class="app-content">
+                            <ol class="app-features-list">
+                                <li class="app-feature-item">
+                                    <div class="app-feature-text-wrapper">
+                                        <h3 class="app-feature-title">Управління через смартфон</h3>
+                                        <p class="app-feature-text">
+                                            Додаток дозволяє легко контролювати стан рослин і процес поливу
+                                            прямо з вашого телефону.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="app-feature-item">
+                                    <div class="app-feature-text-wrapper">
+                                        <h3 class="app-feature-title">Розумні сповіщення</h3>
+                                        <p class="app-feature-text">
+                                            Нагадування, коли рослині треба догляд.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="app-feature-item">
+                                    <div class="app-feature-text-wrapper">
+                                        <h3 class="app-feature-title">Щотижнева статистика</h3>
+                                        <p class="app-feature-text">
+                                            Прості й зрозумілі звіти про стан рослин для покращення вашого
+                                            догляду.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="app-feature-item">
+                                    <div class="app-feature-text-wrapper">
+                                        <h3 class="app-feature-title">Режими поливу</h3>
+                                        <p class="app-feature-text">
+                                            Режими поливу графік графіка на основі потреб рослини: полив
+                                            створюється за низької вологості обґрунтовано, а AI оптимізує
+                                            процес.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="app-image">
+                            <video 
+                                class="app-video" 
+                                src="./media/video/app-usage.mp4" 
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="kit-section">
+                <div class="container">
+                    <img class="decoration-2 decoration-2-desktop" src="./media/img/decoration-2.png" alt="" aria-hidden="true" />
+                    
+                    <h2 class="section-title">Що у комплекті</h2>
+                    <div class="kit-container">
+                        <figure class="kit-main-item">
+                            <img src="./media/img/leafypod.png" alt="LeafyPod пристрій" />
+                            <figcaption>LeafyPod</figcaption>
+                        </figure>
+                        <div class="kit-accessories">
+                            <figure class="kit-item">
+                                <img src="./media/img/power-adapter.png" alt="Адаптер живлення" />
+                                <figcaption>Адаптер<br />живлення</figcaption>
+                            </figure>
+                            <figure class="kit-item">
+                                <img src="./media/img/power-cable.png" alt="Зарядний кабель" />
+                                <figcaption>Зарядний<br />кабель</figcaption>
+                            </figure>
+                            <figure class="kit-item">
+                                <img src="./media/img/leafypod-filter.png" alt="Фільтр" />
+                                <figcaption>LeafyPod<br />фільтр</figcaption>
+                            </figure>
+                            <figure class="kit-item">
+                                <img src="./media/img/instruction.png" alt="Інструкція" />
+                                <figcaption>Інструкція</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="reviews">
-                <h2 class="section-title">Відгуки</h2>
-                <div class="reviews-grid">
-                    <article class="review-card">
-                        <div class="review-header">
-                            <img class="review-avatar" src="./images/AvatarDarina.jpg" alt="Фото Дарини" />
-                            <h3 class="review-author">Дарина</h3>
-                        </div>
-                        <p class="review-text">
-                            LeafyPod — ідеальне рішення для догляду за рослинами без зайвих
-                            турбот. Він самостійно контролює полив, освітлення і температуру,
-                            створюючи ідеальні умови. Ваші рослини завжди будуть доглянуті,
-                            навіть коли ви зайняті чи подорожуєте.
-                        </p>
-                    </article>
-                    <article class="review-card">
-                        <div class="review-header">
-                            <img class="review-avatar" src="./images/AvatarArsen.jpg" alt="Фото Арсена" />
-                            <h3 class="review-author">Арсен</h3>
-                        </div>
-                        <p class="review-text">
-                            Це чудово підходить для новачків, які тільки починають вирішувати
-                            проблеми, з якими ми стикаємося як початківці доглядачі рослин,
-                            наприклад, коли потрібно поливати рослину, чи отримує вона
-                            достатньо світла, чи не занадто жарко або холодно у нашому домі.
-                        </p>
-                    </article>
-                    <article class="review-card">
-                        <div class="review-header">
-                            <img class="review-avatar" src="./images/AvatarSofia.jpg" alt="Фото Софії" />
-                            <h3 class="review-author">Софія</h3>
-                        </div>
-                        <p class="review-text">
-                            Цей вазон також ідеально підходить для тих, хто подорожує і не
-                            хоче хвилюватися, як поливати рослини або в якому стані вони
-                            будуть, коли ви повернетеся додому. Завдяки цьому горщику, ваші
-                            рослини будуть доглянуті — усе в одному.
-                        </p>
-                    </article>
+                <div class="container">
+                    <h2 class="section-title">Відгуки</h2>
+                    <div class="reviews-grid">
+                        <article class="review-card">
+                            <div class="review-header">
+                                <img class="review-avatar" src="./media/img/customer-daryna-avatar.svg" alt="Фото Дарини" />
+                                <h3 class="review-author">Дарина</h3>
+                            </div>
+                            <p class="review-text">
+                                LeafyPod — ідеальне рішення для догляду за рослинами без зайвих
+                                турбот. Він самостійно контролює полив, освітлення і температуру,
+                                створюючи ідеальні умови. Ваші рослини завжди будуть доглянуті,
+                                навіть коли ви зайняті чи подорожуєте.
+                            </p>
+                        </article>
+                        <article class="review-card">
+                            <div class="review-header">
+                                <img class="review-avatar" src="./media/img/customer-arsen-avatar.svg" alt="Фото Арсена" />
+                                <h3 class="review-author">Арсен</h3>
+                            </div>
+                            <p class="review-text">
+                                Це чудово підходить для новачків, які тільки починають вирішувати
+                                проблеми, з якими ми стикаємося як початківці доглядачі рослин,
+                                наприклад, коли потрібно поливати рослину, чи отримує вона
+                                достатньо світла, чи не занадто жарко або холодно у нашому домі.
+                            </p>
+                        </article>
+                        <article class="review-card">
+                            <div class="review-header">
+                                <img class="review-avatar" src="./media/img/customer-sofia-avatar.svg" alt="Фото Софії" />
+                                <h3 class="review-author">Софія</h3>
+                            </div>
+                            <p class="review-text">
+                                Цей вазон також ідеально підходить для тих, хто подорожує і не
+                                хоче хвилюватися, як поливати рослини або в якому стані вони
+                                будуть, коли ви повернетеся додому. Завдяки цьому горщику, ваші
+                                рослини будуть доглянуті — усе в одному.
+                            </p>
+                        </article>
+                    </div>
                 </div>
             </section>
         </main>
+        
         <footer class="footer">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <a href="#" class="footer-logo-link">
-                        <img src="./icons/LeafyPodLogoBlack.svg" alt="LeafyPod" />
-                        <span class="footer-logo-text">LeafyPod</span>
-                    </a>
-                    <p class="footer-slogan">
-                        Розумний догляд за вашими рослинами — легко і без турбот!
-                    </p>
-                    <div class="footer-socials">
-                        <p>Слідкуйте за нами</p>
-                        <div class="social-icons">
-                            <a href="#" aria-label="Facebook">
-                                <img src="./icons/Facebook.svg" alt="Facebook" />
-                            </a>
-                            <a href="#" aria-label="YouTube">
-                                <img src="./icons/Youtube.svg" alt="YouTube" />
-                            </a>
-                            <a href="#" aria-label="Instagram">
-                                <img src="./icons/Instagram.svg" alt="Instagram" />
-                            </a>
+            <div class="container">
+                <img class="decoration-3" src="./media/img/decoration-3.png" alt="" aria-hidden="true" />
+                
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo-link">
+                            <img src="./media/img/logo.svg" alt="LeafyPod" />
+                            <span class="footer-logo-text">LeafyPod</span>
+                        </a>
+                        <p class="footer-slogan">
+                            Розумний догляд за вашими рослинами — легко і без турбот!
+                        </p>
+                        <div class="footer-socials">
+                            <p>Слідкуйте за нами</p>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook">
+                                    <img src="./media/img/facebook-icon.svg" alt="Facebook" />
+                                </a>
+                                <a href="#" aria-label="YouTube">
+                                    <img src="./media/img/youtube-icon.svg" alt="YouTube" />
+                                </a>
+                                <a href="#" aria-label="Instagram">
+                                    <img src="./media/img/instagram-icon.svg" alt="Instagram" />
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="footer-links">
+                        <ul class="footer-nav">
+                            <li>
+                                <a href="#">Умови використання</a>
+                            </li>
+                            <li>
+                                <a href="#">Політика конфіденційності</a>
+                            </li>
+                        </ul>
+                        <a href="mailto:info@leafypod.one" class="footer-email">info@leafypod.one</a>
+                        <p class="footer-copyright">© 2024 LeafyPod. Усі права захищені.</p>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <ul class="footer-nav">
-                        <li>
-                            <a href="#">Умови використання</a>
-                        </li>
-                        <li>
-                            <a href="#">Політика конфіденційності</a>
-                        </li>
-                    </ul>
-                    <a href="mailto:info@leafypod.one" class="footer-email">info@leafypod.one</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <small>(C) 2024 LeafyPod. Усі права захищені.</small>
             </div>
         </footer>
     </body>
